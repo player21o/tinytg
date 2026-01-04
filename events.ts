@@ -13,6 +13,10 @@ declare global {
         receiveEvent: (event: string, data: any) => void;
       };
     };
+    TelegramGameProxy: {
+      receiveEvent: (event: string, data: any) => void;
+    };
+    TelegramGameProxy_receiveEvent: (event: string, data: any) => void;
   }
 }
 
@@ -22,6 +26,16 @@ window.Telegram = {
       events.processEvent(event as any, data);
     },
   },
+};
+
+window.TelegramGameProxy = {
+  receiveEvent(event, data) {
+    events.processEvent(event as any, data);
+  },
+};
+
+window.TelegramGameProxy_receiveEvent = (event, data) => {
+  events.processEvent(event as any, data);
 };
 
 class TelegramEventListener {
