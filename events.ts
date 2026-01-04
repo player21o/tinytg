@@ -1,7 +1,7 @@
-import type { Events, WebMessage } from "./types";
+import type { Events } from "./types";
 
 window.addEventListener("message", ({ data }) => {
-  const parsedData = JSON.parse(data) as WebMessage;
+  const parsedData = JSON.parse(data) as any;
 
   events.processEvent(parsedData.eventType, parsedData.eventData);
 });

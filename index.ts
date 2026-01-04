@@ -1,4 +1,4 @@
-import type { LaunchParameters, ThemeParameters } from "./types";
+import type { Events, LaunchParameters } from "./types";
 
 export function getLaunchParameters() {
   const hash = window.location.hash.slice(1);
@@ -29,7 +29,10 @@ export function getThemeParameters() {
   return getLaunchParameters()["tgWebAppThemeParams"];
 }
 
-export function applyThemeCss(prefix = "tg-theme-", theme?: ThemeParameters) {
+export function applyThemeCss(
+  prefix = "tg-theme-",
+  theme?: Events["theme_changed"]["theme_params"]
+) {
   const params = theme == undefined ? getThemeParameters() : theme;
 
   document.documentElement.style.cssText =
