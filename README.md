@@ -1,11 +1,11 @@
 # tinytg
 
-A tiny set of tools to communicate with Telegram Mini Apps API.
+A [tiny](https://bundlephobia.com/package/tinytg) set of tools to communicate with Telegram Mini Apps API.
 
 Add to your project:
 
 ```bash
-git clone https://github.com/player21o/tinytg.git
+npm i tinytg
 ```
 
 # why?
