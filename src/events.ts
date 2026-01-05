@@ -1,4 +1,4 @@
-import type { Events } from "./types";
+import type { Events } from "./types.js";
 
 window.addEventListener("message", ({ data }) => {
   const parsedData = JSON.parse(data) as any;

@@ -1,4 +1,5 @@
-import type { Events, LaunchParameters } from "./types";
+import type { Events } from "@tma.js/sdk-solid";
+import type { LaunchParameters } from "./types.js";
 
 export function getLaunchParameters() {
   const hash = window.location.hash.slice(1);

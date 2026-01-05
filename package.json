@@ -1,0 +1,35 @@
+{
+  "name": "tinytg",
+  "version": "1.0.0",
+  "description": "A tiny set of tools to communicate with Telegram Mini Apps API.",
+  "homepage": "https://github.com/player21o/tinytg#readme",
+  "bugs": {
+    "url": "https://github.com/player21o/tinytg/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/player21o/tinytg.git"
+  },
+  "license": "MIT",
+  "author": "player210",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1"
+  }
+}
