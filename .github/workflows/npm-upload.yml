@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && ( github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main' )
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v5
     - name: Cache node_modules
       id: cache-modules
       uses: actions/cache@v5
@@ -19,5 +19,5 @@ jobs:
     - name: Publish
       uses: mikeal/merge-release@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB-TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
