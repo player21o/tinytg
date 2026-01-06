@@ -1,9 +1,12 @@
+import { isTMA } from "./misc.js";
 import type { Events } from "./types.js";
 
 window.addEventListener("message", ({ data }) => {
-  const parsedData = JSON.parse(data) as any;
+  if (isTMA()) {
+    const parsedData = JSON.parse(data) as any;
 
-  events.processEvent(parsedData.eventType, parsedData.eventData);
+    events.processEvent(parsedData.eventType, parsedData.eventData);
+  }
 });
 
 declare global {
