@@ -15,7 +15,7 @@ declare global {
 class TelegramMethodSender {
   constructor() {}
 
-  public post<T extends keyof Methods>(method: T, data: Methods[T]["params"]) {
+  public post<T extends keyof Methods>(method: T, data?: Methods[T]["params"]) {
     if (
       window["TelegramWebviewProxy"] != undefined &&
       window.TelegramWebviewProxy.postEvent != undefined

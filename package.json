@@ -1,6 +1,6 @@
 {
   "name": "tinytg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A tiny set of tools to communicate with Telegram Mini Apps API.",
   "homepage": "https://github.com/player21o/tinytg#readme",
   "bugs": {
